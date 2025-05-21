@@ -1,7 +1,7 @@
 import requests
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-OLLAMA_MODEL = "codellama"  # Change if you use a different model
+OLLAMA_MODEL = "tinyllama"  # Use a lightweight model (e.g., 'tinyllama' or 'phi')
 
 def ask_ollama(prompt: str) -> str:
     payload = {

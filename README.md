@@ -4,7 +4,7 @@ A minimal local project for managing code prompts with a local AI model via Olla
 
 ## Features
 
-- Submit code prompts and get responses from a local AI model (e.g., Code Llama via Ollama)
+- Submit code prompts and get responses from a local AI model (e.g., TinyLlama, Phi via Ollama)
 - View prompt/response history
 - Simple browser-based interface
 - All data stored locally in SQLite
@@ -13,7 +13,7 @@ A minimal local project for managing code prompts with a local AI model via Olla
 
 - Python 3.8+
 - Node.js (optional, for future frontend expansion)
-- Ollama installed and running (`ollama run codellama`)
+- Ollama installed and running (`ollama run tinyllama` or `ollama run phi`)
 
 ## Setup
 
@@ -24,10 +24,12 @@ A minimal local project for managing code prompts with a local AI model via Olla
     pip install -r requirements.txt
     ```
 
-2. **Start Ollama with a code model:**
+2. **Start Ollama with a lightweight model:**
 
     ```sh
-    ollama run codellama
+    ollama run tinyllama
+    # or for another lightweight model:
+    ollama run phi
     ```
 
 3. **Run the backend:**

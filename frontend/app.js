@@ -22,4 +22,13 @@ document.getElementById("promptForm").onsubmit = async (e) => {
     if (!prompt) return;
     await fetch(`${API_BASE}/prompts/`, {
         method: "POST",
-       
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt })
+    });
+    document.getElementById("promptInput").value = ""; // Limpa o campo
+    fetchHistory(); // Atualiza o histórico
+};
+
+// Carrega o histórico ao abrir a página
+fetchHistory();
+
